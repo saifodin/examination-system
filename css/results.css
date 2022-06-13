@@ -1,0 +1,253 @@
+.container {
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@font-face {
+  font-family: digital;
+  src: url(../fonts/digital.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Thin.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+:root {
+  --blue: #03dac5;
+  --darkTheme: #01091f;
+  --liteDarkTheme: #151c32;
+  --fontColor: #b3b5bc;
+  --mark: #de9707;
+  --skipped: #f74f2b;
+}
+
+/******************************** header */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
+  font-family: Roboto;
+  background-color: var(--liteDarkTheme);
+}
+body > .header {
+  background-color: var(--darkTheme);
+  border-bottom: 3px solid #ff3366;
+}
+body > .header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body > .header .container .logo img {
+  height: 70px;
+}
+body > .header .container .timer {
+  font-family: digital;
+  color: var(--blue);
+  font-size: 30px;
+}
+body > .header .container .profile {
+  color: #686c79;
+}
+
+/******************************** examStatistics */
+
+body > .examStatistics {
+  color: var(--fontColor);
+  font-size: 18px;
+  padding: 10px 0px;
+}
+body > .examStatistics .container {
+  display: flex;
+  justify-content: space-between;
+}
+body > .examStatistics .container .examName {
+  width: 25%;
+}
+body > .examStatistics .container .info {
+  width: 72%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body > .examStatistics .container .info p span.questions {
+  color: #ffffff;
+}
+body > .examStatistics .container .info p span.answered {
+  color: var(--blue);
+}
+body > .examStatistics .container .info p span.skipped {
+  color: var(--skipped);
+}
+@media (max-width: 767px) {
+  body > .examStatistics .container .examName {
+    width: 15%;
+  }
+  body > .examStatistics .container .info {
+    width: 83%;
+  }
+}
+@media (max-width: 575px) {
+  body > .examStatistics .container .info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  body > .examStatistics .container {
+    position: relative;
+  }
+  body > .examStatistics .container .info button {
+    position: absolute;
+    right: 12px;
+    top: 0;
+  }
+  body > .examStatistics .container .examName {
+    width: 30%;
+  }
+  body > .examStatistics .container .info {
+    width: 70%;
+  }
+  body > .examStatistics .container .examName {
+    width: 40%;
+  }
+  body > .examStatistics .container .info {
+    width: 60%;
+  }
+}
+
+/******************************** bodyContent */
+
+body > .bodyContent .container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body > .bodyContent .container > div {
+  background-color: #01091f;
+  border-radius: 20px;
+  padding: 30px;
+  box-sizing: border-box;
+  color: #8c9099;
+}
+body > .bodyContent .container .questionContainer {
+  width: 49%;
+  margin-top: 30px;
+}
+body > .bodyContent .container .questionContainer.right {
+  border: 1px solid var(--blue);
+}
+body > .bodyContent .container .questionContainer.wrong {
+  border: 1px solid var(--skipped);
+  background-color: #1c0a06;
+}
+@media (max-width: 767px) {
+  body > .bodyContent .container .questionContainer {
+    width: 100%;
+  }
+}
+
+/******************************** question and answers*/
+
+body > .bodyContent .container {
+  padding-bottom: 30px;
+}
+body > .bodyContent .container .questionContainer .qTitle {
+  color: #d3d5d9;
+  font-size: 20px;
+  font-weight: 500;
+  min-height: 80px;
+}
+body > .bodyContent .container .questionContainer .qTitle > * {
+  display: inline;
+}
+body > .bodyContent .container .questionContainer .qAnswers > div {
+  border: 2px solid transparent;
+  background-color: var(--liteDarkTheme);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  color: #9497a0;
+}
+body > .bodyContent .container .questionContainer .qAnswers > div > * {
+  display: inline-block;
+  margin: 0;
+}
+body > .bodyContent .container .questionContainer .qAnswers > div > span {
+  width: 20px;
+  height: 20px;
+  color: #424758;
+  background-color: var(--darkTheme);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  padding: 4px;
+}
+body > .bodyContent .container .questionContainer .qAnswers > div.right {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+body > .bodyContent .container .questionContainer .qAnswers > div.right > span {
+  background-color: var(--blue);
+  color: #01091f;
+}
+body > .bodyContent .container .questionContainer .qAnswers > div.hisAnswer {
+  border-color: var(--skipped);
+  color: var(--skipped);
+}
+body > .bodyContent .container .questionContainer .qAnswers > div.hisAnswer > span {
+  background-color: var(--skipped);
+  color: #01091f;
+}

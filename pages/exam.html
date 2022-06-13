@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examination System</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/exam.css" />
+  </head>
+  <body>
+
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="../imgs/examlogo.svg" alt="exam logo" />
+        </div>
+        <div class="timer">30:45</div>
+        <div class="profile">Saifuddin Ibrahim</div>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeLineMove"></div>
+    </div>
+
+    <div class="examStatistics">
+      <div class="container">
+        <p class="examName">ITI, Data Structure Basics.</p>
+        <div class="info">
+          <p>Questions: <span class="questions">24</span></p>
+          <p>Answered: <span class="answered">20</span></p>
+          <p>Mark for Review: <span class="mark">07</span></p>
+          <p>Left: <span class="skipped">06</span></p>
+          <button id="finish">Finish</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bodyContent">
+      <div class="container">
+        <div class="sideContent">
+          <h3>Questions</h3>
+          <div class="questionsNumber">
+            <!-- <span class="mark">1</span>
+            <span class="skipped">2</span>
+            <span class="answered">3</span>
+            <span class="current">14</span>
+            <span class="notYet">15</span>
+            <span class="notYet">16</span>
+            <span class="notYet">17</span>
+            <span class="notYet">8</span>
+            <span class="notYet">8</span>
+            <span class="notYet">8</span>
+            <span class="notYet">8</span>
+            <span class="notYet">8</span>
+            <span class="notYet">8</span>
+            <span class="notYet">18</span> -->
+          </div>
+        </div>
+        <div class="mainContent">
+          <div class="qTitle">
+            <span class="questionNumber">1. </span>
+            <p>Which of the following is/are the levels of implementation of data structure</p>
+          </div>
+
+          <div class="qAnswers">
+            <div>
+              <span>A</span>
+              <p>Abstract level</p>
+            </div>
+            <div>
+              <span>B</span>
+              <p>Application level</p>
+            </div>
+            <div>
+              <span>C</span>
+              <p>Implementation level</p>
+            </div>
+            <div>
+              <span>D</span>
+              <p>All of the above</p>
+            </div>
+          </div>
+
+          <div class="controls">
+            <label class="checkContainer">
+              Mark for Review
+              <input type="checkbox" />
+              <span class="checkMark"></span>
+            </label>
+
+            <div class="movingBtns">
+              <div class="prev">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="12" height="12" x="0" y="0" viewBox="0 0 443.52 443.52" style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                  <g xmlns="http://www.w3.org/2000/svg">
+                    <path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8    c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712    L143.492,221.863z" fill="#000000" data-original="#000000" class=""></path>
+                  </g>
+                </svg>
+                Previous
+              </div>
+              <div class="next">
+                Next
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="12" height="12" x="0" y="0" viewBox="0 0 443.52 443.52" style="enable-background: new 0 0 512 512" xml:space="preserve" class="">
+                  <g xmlns="http://www.w3.org/2000/svg">
+                    <path d="M143.492,221.863L336.226,29.129c6.663-6.664,6.663-17.468,0-24.132c-6.665-6.662-17.468-6.662-24.132,0l-204.8,204.8    c-6.662,6.664-6.662,17.468,0,24.132l204.8,204.8c6.78,6.548,17.584,6.36,24.132-0.42c6.387-6.614,6.387-17.099,0-23.712    L143.492,221.863z" fill="#000000" data-original="#000000" class=""></path>
+                  </g>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/exam.js"></script>
+  </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+  <body>
+    <span class="emptyValid forJsOnly error">This field can't be blank</span>
+
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="imgs/examlogo.svg" alt="exam logo" />
+        </div>
+        <button>login</button>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="mainContent">
+          <h3>Hello, Friend!</h3>
+          <p>Enter your personal details and start with us</p>
+          <div class="formContainer">
+            <div class="name">
+              <div class="fName">
+                <label for="fName">First name</label>
+                <input type="text" id="fName" name="fName" />
+                <span class="error validation">Allowed Characters only</span>
+              </div>
+              <div class="lName">
+                <label for="lName">Last name</label>
+                <input type="text" id="lName" name="lName" />
+                <span class="error validation">Allowed Characters only</span>
+              </div>
+            </div>
+
+            <div class="email">
+              <label for="email">Your email address</label>
+              <input type="email" id="email" name="email" />
+              <span class="error validation">Invalid email address</span>
+            </div>
+
+            <div class="password">
+              <label for="password">Create a password</label>
+              <input type="password" id="password" name="password" />
+              <span class="error validation">Length should be more than 7 characters</span>
+            </div>
+
+            <div class="rePassword">
+              <label for="rePassword">Confirm your password</label>
+              <input type="password" id="rePassword" name="rePassword" />
+              <span class="error validation">The Passwords you entered do not match</span>
+            </div>
+
+            <button>Sign up</button>
+          </div>
+        </div>
+        <div class="imgContainer">
+          <img src="./imgs/exam.png" alt="" />
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="./js/index.js"></script>
+</html>

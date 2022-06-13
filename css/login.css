@@ -1,0 +1,231 @@
+.container {
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
+@font-face {
+  font-family: digital;
+  src: url(../fonts/digital.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Thin.ttf);
+  font-weight: 100;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Light.ttf);
+  font-weight: 300;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/Roboto-Bold.ttf);
+  font-weight: 700;
+}
+
+:root {
+  --blue: #03dac5;
+  --darkTheme: #01091f;
+  --liteDarkTheme: #151c32;
+  --fontColor: #b3b5bc;
+  --skipped: #f74f2b;
+  --pink: #ff3366;
+  --darkPink: #ad2e4e;
+}
+body {
+  font-family: Roboto;
+  background-color: var(--liteDarkTheme);
+}
+body > .forJsOnly {
+  display: none;
+}
+span.error {
+  display: none;
+}
+
+/******************************** header */
+
+body > .header {
+  background-color: var(--darkTheme);
+  border-bottom: 3px solid var(--blue);
+}
+body > .header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+body > .header .container .logo img {
+  height: 70px;
+}
+
+/******************************** main */
+
+main {
+  color: #d3d5d9;
+}
+main .container {
+  display: flex;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+main .container .mainContent {
+  width: 30%;
+  flex-grow: 1;
+  padding-right: 70px;
+}
+main .container .mainContent h3 {
+  font-size: 40px;
+  margin-bottom: 0px;
+  margin-top: 50px;
+}
+main .container .mainContent p {
+  font-size: 16px;
+  color: #9497a0;
+}
+main .container .imgContainer {
+  width: 70%;
+  display: flex;
+}
+main .container .imgContainer img {
+  width: 100%;
+  opacity: 70%;
+}
+
+@media (max-width: 1199px) {
+  main .container .imgContainer img {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 991px) {
+  main .container .mainContent {
+    width: 40%;
+  }
+  main .container .imgContainer {
+    width: 60%;
+  }
+  main .container .imgContainer img {
+    margin-top: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  main .container {
+    flex-wrap: wrap;
+  }
+  main .container .mainContent {
+    width: 100%;
+    padding: 0;
+  }
+  main .container .imgContainer {
+    width: 100%;
+    display: none;
+  }
+}
+/******************************** formContainer */
+
+.formContainer {
+  margin-top: 40px;
+  position: relative;
+}
+.formContainer > div > * {
+  display: block;
+}
+.formContainer span.error {
+  display: none;
+}
+.formContainer > div {
+  margin-bottom: 25px;
+}
+.formContainer input {
+  width: 100%;
+  border: 1px solid transparent;
+  background-color: var(--darkTheme);
+  border-radius: 5px;
+  color: #d3d5d9;
+  font-size: 14px;
+  padding: 7px 10px;
+  box-sizing: border-box;
+  outline: none;
+  transition: all 0.2s;
+}
+.formContainer label {
+  font-size: 14px;
+  color: #9497a0;
+  margin-bottom: 5px;
+}
+.formContainer input:focus,
+.formContainer input:hover {
+  border-color: var(--blue);
+}
+.formContainer input.error {
+  border-color: var(--skipped);
+}
+.formContainer span.error {
+  font-size: 11px;
+  position: absolute;
+  padding-top: 5px;
+  color: var(--skipped);
+}
+.formContainer button {
+  width: 100%;
+  padding: 10px 0px;
+  background-color: var(--pink);
+  border: none;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.4s;
+  margin-top: 30px;
+}
+.formContainer button:hover {
+  background-color: var(--darkPink);
+}
+.notRecognize {
+  font-size: 13px;
+  color: var(--skipped);
+  border: 1px solid var(--skipped);
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  position: absolute;
+  display: none;
+}

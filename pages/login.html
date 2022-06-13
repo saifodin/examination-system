@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/normalize.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+  </head>
+  <body>
+    <span class="emptyValid forJsOnly error">This field can't be blank</span>
+
+    <div class="header">
+      <div class="container">
+        <div class="logo">
+          <img src="../imgs/examlogo.svg" alt="exam logo" />
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <div class="container">
+        <div class="mainContent">
+          <h3>Welcome Back!</h3>
+          <p>To keep connected with us please login with your personal info</p>
+          <div class="formContainer">
+            <div class="email">
+              <label for="email">Enter your email</label>
+              <input type="email" id="email" name="email" />
+              <span class="error validation">Invalid email address</span>
+            </div>
+
+            <div class="password">
+              <label for="password">Enter your password</label>
+              <input type="password" id="password" name="password" />
+              <span class="error validation">Length should be more than 7 characters</span>
+            </div>
+
+            <button>Sign in</button>
+            <div class="notRecognize">Sorry, we don't recognize that email or password, Please try again.</div>
+          </div>
+        </div>
+        <div class="imgContainer">
+          <img src="../imgs/exam.png" alt="" />
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="../js/login.js"></script>
+</html>
